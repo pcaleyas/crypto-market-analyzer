@@ -1,0 +1,3 @@
+=== dl_class_weights Results ===
+Average Sharpe Ratio: 0.0478
+Average Max Drawdown: -14.42%

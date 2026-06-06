@@ -1,0 +1,3 @@
+=== dl_regression Results ===
+Average Sharpe Ratio: -0.0071
+Average Max Drawdown: -31.23%

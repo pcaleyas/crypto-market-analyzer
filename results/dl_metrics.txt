@@ -1,0 +1,3 @@
+=== Deep Learning (LSTM) Results ===
+Average Sharpe Ratio: 0.1316
+Average Max Drawdown: -10.37%

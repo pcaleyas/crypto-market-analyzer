@@ -1,0 +1,3 @@
+=== Baseline Random Forest Results ===
+Average Sharpe Ratio: -0.0240
+Average Max Drawdown: -29.62%
