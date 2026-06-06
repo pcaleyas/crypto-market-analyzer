@@ -1,3 +1,3 @@
 === dl_dyn_threshold Results ===
-Average Sharpe Ratio: 0.8965
-Average Max Drawdown: -39.59%
+Average Sharpe Ratio: 0.8076
+Average Max Drawdown: -36.47%

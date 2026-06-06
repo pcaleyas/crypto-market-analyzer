@@ -1,0 +1,32 @@
+=== VECTORBT BACKTEST REPORT ===
+Model: LSTM Dynamic Threshold (>0.35)
+Period: 2024-01-15 to 2026-06-04
+------------------------------
+Start                         2024-01-15 00:00:00
+End                           2026-06-04 00:00:00
+Period                          872 days 00:00:00
+Start Value                               10000.0
+End Value                            12956.667254
+Total Return [%]                        29.566673
+Benchmark Return [%]                    50.079086
+Max Gross Exposure [%]                      100.0
+Total Fees Paid                        772.671987
+Max Drawdown [%]                        48.374796
+Max Drawdown Duration           534 days 00:00:00
+Total Trades                                   14
+Total Closed Trades                            13
+Total Open Trades                               1
+Open Trade PnL                       -5623.047748
+Win Rate [%]                            30.769231
+Best Trade [%]                          53.239351
+Worst Trade [%]                        -13.864271
+Avg Winning Trade [%]                   33.711058
+Avg Losing Trade [%]                     -5.24359
+Avg Winning Trade Duration      138 days 00:00:00
+Avg Losing Trade Duration         9 days 21:20:00
+Profit Factor                            1.892509
+Expectancy                             659.978077
+Sharpe Ratio                             0.464716
+Calmar Ratio                             0.236731
+Omega Ratio                              1.074878
+Sortino Ratio                            0.691881

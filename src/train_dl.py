@@ -161,7 +161,7 @@ def run_experiment(approach_name, df, X_df, y_series, time_steps):
         f.write(f"Average Sharpe Ratio: {avg_sharpe:.4f}\n")
         f.write(f"Average Max Drawdown: {avg_mdd:.2f}%\n")
         
-    return avg_sharpe, avg_mdd, model
+    return avg_sharpe, avg_mdd, model, scaler
 
 def run_dl_training():
     os.makedirs(MODEL_DIR, exist_ok=True)
@@ -187,16 +187,22 @@ def run_dl_training():
     # 1. Classification with Class Weights
     run_experiment("dl_class_weights", df, X_df, y_class, time_steps)
     
-    # 2. Classification with Dynamic Threshold
-    run_experiment("dl_dyn_threshold", df, X_df, y_class, time_steps)
+    # 2. Classification with Dynamic Threshold (The Best Performer)
+    _, _, final_model, final_scaler = run_experiment("dl_dyn_threshold", df, X_df, y_class, time_steps)
     
-    # 3. Regression (The user's preferred robust option)
-    _, _, final_model = run_experiment("dl_regression", df, X_df, y_reg, time_steps)
+    # 3. Regression 
+    run_experiment("dl_regression", df, X_df, y_reg, time_steps)
     
-    # Save the Regression model as the final chosen model
-    model_path = os.path.join(MODEL_DIR, "dl_lstm_regression.keras")
+    # Save the Dynamic Threshold model as the final chosen model based on experiments
+    model_path = os.path.join(MODEL_DIR, "dl_lstm_dyn_threshold.keras")
     final_model.save(model_path)
-    print(f"\nRegression model successfully saved at: {model_path}")
+    
+    # Save scaler
+    import joblib
+    scaler_path = os.path.join(MODEL_DIR, "dl_lstm_scaler.joblib")
+    joblib.dump(final_scaler, scaler_path)
+    
+    print(f"\nDynamic Threshold model and scaler successfully saved at: {MODEL_DIR}")
 
 if __name__ == "__main__":
     tf.random.set_seed(42)

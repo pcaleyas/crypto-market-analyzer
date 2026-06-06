@@ -1,0 +1,3 @@
+=== Baseline XGBoost Results ===
+Average Sharpe Ratio: 0.1979
+Average Max Drawdown: -33.31%

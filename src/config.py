@@ -6,6 +6,7 @@ TICKER = "BTC-USD"
 EXOGENOUS_TICKERS = ["^VIX", "DX-Y.NYB"] # S&P500 VIX and Dollar Index (DXY)
 START_DATE = "2018-01-01"
 END_DATE = datetime.today().strftime('%Y-%m-%d') # Automated current date
+OOS_START_DATE = "2024-01-01" # Out of sample start date for backtesting
 INTERVAL = "1d"
 
 # 2. Real-World Frictions
