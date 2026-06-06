@@ -17,6 +17,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_RAW_DIR = os.path.join(BASE_DIR, "data", "raw")
 DATA_PROCESSED_DIR = os.path.join(BASE_DIR, "data", "processed")
 MODEL_DIR = os.path.join(BASE_DIR, "models", "saved_models")
+RESULTS_DIR = os.path.join(BASE_DIR, "results")
 
 # 4. Model Variables
 TARGET_COL = "Realistic_Target"
+EXPECTED_RETURN_COL = "Expected_Return"

@@ -9,7 +9,7 @@ from ta.volatility import BollingerBands
 # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from config import (
-    DATA_RAW_DIR, DATA_PROCESSED_DIR, TARGET_COL, 
+    DATA_RAW_DIR, DATA_PROCESSED_DIR, TARGET_COL, EXPECTED_RETURN_COL,
     FEE_RATE, SLIPPAGE
 )
 
@@ -96,6 +96,9 @@ def run_feature_engineering():
     
     # Realistic Target: 1 if return > threshold, else 0
     df_btc[TARGET_COL] = (expected_return > threshold).astype(int)
+    
+    # Save the continuous return for Regression approach
+    df_btc[EXPECTED_RETURN_COL] = expected_return
     
     # 4. Clean up - CRITICAL: Data Leakage Prevention!
     # Drop the shifted column 'Close_Tomorrow' so the model cannot see the future
