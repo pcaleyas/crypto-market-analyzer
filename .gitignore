@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project Specific
+data/raw/
+data/processed/
+models/saved_models/
+models/scalers/
+.agents/
