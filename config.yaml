@@ -1,0 +1,31 @@
+# ==========================================
+# Crypto Market Analyzer Configuration
+# ==========================================
+
+# 1. Asset Configuration and Context
+assets:
+  primary_ticker: "BTCUSDT"
+  exogenous_tickers:
+    - "^VIX"
+    - "DX-Y.NYB"
+
+timeframe:
+  start_date: "2018-01-01"
+  oos_start_date: "2024-01-01"  # Out of sample start date for backtesting
+  interval: "1d"
+
+# 2. Real-World Frictions
+trading:
+  fee_rate: 0.0015     # Exchange fee (e.g., 0.15% per trade)
+  slippage: 0.0005     # Expected price slippage
+
+# 3. Model Variables
+modeling:
+  target_col: "Realistic_Target"
+  expected_return_col: "Expected_Return"
+
+# 4. Data Infrastructure
+infrastructure:
+  duckdb_path: "data/market_data.duckdb"
+  parquet_dir: "data/processed/parquet"
+  binance_vision_base_url: "https://data.binance.vision/data/futures/um/monthly"

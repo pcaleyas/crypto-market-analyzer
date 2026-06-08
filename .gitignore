@@ -223,3 +223,10 @@ data/processed/
 models/saved_models/
 models/scalers/
 .agents/
+
+# MLflow
+mlruns/
+mlflow.db
+
+# DuckDB
+*.duckdb
