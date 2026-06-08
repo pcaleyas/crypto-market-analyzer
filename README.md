@@ -74,6 +74,13 @@ uv run python src/backtest.py
 
 The backtester will generate a detailed statistical report (`backtest_report.txt`) and a highly interactive HTML equity curve in the `results/` directory.
 
+### Visualizing Experiments (MLflow)
+This project uses MLflow for experiment tracking. To visualize the results and metrics of your runs, execute the following command in your terminal:
+```bash
+mlflow server --host localhost --port 5000
+```
+Then, open your browser and navigate to [http://localhost:5000](http://localhost:5000).
+
 ## 🔮 Future Iterations
 
 The pipeline is built with modularity in mind. To transition from Daily (`1d`) to Hourly (`1h`) trading:
